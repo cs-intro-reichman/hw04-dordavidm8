@@ -175,32 +175,23 @@ for (int i = 0; i < arr2.length; i++) {
      *         lexicographically greater than str2.
      *         return -2 if there is an error with the input.
      */
-    public static int compareTo(String str1, String str2) {
-    if (str1 == null || str2 == null) {
-        return -2;
-    }
-
-    char[] arr1 = str1.toCharArray();
-    char[] arr2 = str2.toCharArray();
-
-    int minLength = Math.min(arr1.length, arr2.length);
-
-    for (int i = 0; i < minLength; i++) {
-        if (arr1[i] < arr2[i]) {
-            return -1; 
+    public static int compareTo(String str1, String str2){
+        str1 = str1.toLowerCase();
+        str2 = str2.toLowerCase();
+        if((str1.charAt(0))>(str2.charAt(0))){
+            return 1;}
+        if((str1.charAt(0))<(str2.charAt(0))){
+            return -1;
         }
-        if (arr1[i] > arr2[i]) {
-            return 1; 
+        if((str1.charAt(0))==(str2.charAt(0))){
+            if(((str1.length())==1)&&((str2.length())==1)){
+                return 0;
+            }
+            else if(((str1.length())==1)||((str2.length())==1)){
+                if((str1.length())==1){
+                    return -1;
+                } else return 1;
+            }}
+             return compareTo((str1.substring(1, str1.length())),(str2.substring(1, str2.length())));
         }
-    }    
-    if (arr1.length < arr2.length) {
-        return -1; 
-    }
-    
-    if (arr1.length > arr2.length) {
-        return 1; 
-    }
-
-    return 0; 
-}
 }

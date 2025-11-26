@@ -93,7 +93,7 @@ public class ArrCharOps {
      */
     public static int lastIndexOf(char[] arr, char ch) {
         int indexOfChar = -1;
-        for (int i = arr.length ; i > 0 ; i-- ){
+        for (int i = arr.length - 1 ; i >= 0 ; i-- ){
             if(arr[i] == ch ){
                 indexOfChar = i;
                 return indexOfChar;

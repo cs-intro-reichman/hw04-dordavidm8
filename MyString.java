@@ -1,5 +1,6 @@
 public class MyString {
     public static void main(String[] args) {
+         System.out.println("HEllo TEST!!!!!!!!");
         System.out.println("Testing lowercase:");
         System.out.println("UnHappy : " + lowerCase("UnHappy"));
         System.out.println("This costs 15 Sheksls : " + lowerCase("This costs 15 Sheksls"));

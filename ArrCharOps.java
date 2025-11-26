@@ -107,11 +107,12 @@ public class ArrCharOps {
     */
     public static char[] concat(char[] arr1, char[] arr2) {
         char[] arrNew = new char[arr1.length + arr2.length];
-        for (int i = 0; i < arrNew.length ; i++) {
-            arrNew[i] = arr1[i];
-            arrNew[arrNew.length - i] = arr2[arr2.length- i];
-            
-        }
+        for (int i = 0; i < arr1.length; i++) {
+    arrNew[i] = arr1[i];
+}
+for (int i = 0; i < arr2.length; i++) {
+    arrNew[arr1.length + i] = arr2[i]; 
+}
         return arrNew;
     }
 

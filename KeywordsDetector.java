@@ -26,7 +26,7 @@ public class KeywordsDetector {
             for (int j = 0; j < keywords.length; j++) {
                 String lowerKeyword = keywords[j].toLowerCase();
                 if (MyString.contains(lowerSentence, lowerKeyword)) {
-                    System.out.println(sentences[i] + " ֿֿֿ\n");
+                    System.out.println(sentences[i] );
                 
                 break; 
             }

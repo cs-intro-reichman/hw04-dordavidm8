@@ -176,9 +176,11 @@ for (int i = 0; i < arr2.length; i++) {
      *         return -2 if there is an error with the input.
      */
     public static int compareTo(String str1, String str2){
-        if (str1 == null || str2 == null) {
+        if (str1 == null || str2 == null || str1.isEmpty() || str2.isEmpty() ) {
+
         return -2;
     }
+    int minLength = Math.min(str1.length(), str2.length());
         str1 = str1.toLowerCase();
         str2 = str2.toLowerCase();
         if((str1.charAt(0))>(str2.charAt(0))){

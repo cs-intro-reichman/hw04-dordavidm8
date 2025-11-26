@@ -38,8 +38,10 @@ public class ArrCharOps {
     /** Returns the char value at the specified index. Assume that the array is non-empty.
      */
     public static char charAt(char[] arr, int index) {
-            System.out.print(arr[index-1]);
-        return 0;
+        if (index < 0 || index >= arr.length) {
+        return (char) 0;
+        }
+        return arr[index];
     }
 
     /** If the two arrays have the same value in every index, 
@@ -173,7 +175,7 @@ for (int i = 0; i < arr2.length; i++) {
      *         lexicographically greater than str2.
      *         return -2 if there is an error with the input.
      */
-public static int compareTo(String str1, String str2) {
+    public static int compareTo(String str1, String str2) {
     if (str1 == null || str2 == null) {
         return -2;
     }
@@ -190,9 +192,15 @@ public static int compareTo(String str1, String str2) {
         if (arr1[i] > arr2[i]) {
             return 1; 
         }
+    }    
+    if (arr1.length < arr2.length) {
+        return -1; 
+    }
+    
+    if (arr1.length > arr2.length) {
+        return 1; 
     }
 
-
-    return 0;
+    return 0; 
 }
 }
